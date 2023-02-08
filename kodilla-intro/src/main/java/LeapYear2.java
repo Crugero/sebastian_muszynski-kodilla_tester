@@ -6,19 +6,15 @@ public class LeapYear2 {
     }
 
     private static boolean przestepczyRok(int year) {
-        boolean isLeap = true;
-
         if (year % 4 > 0) {
-            isLeap = false;
+            return false;
         } else if (year % 100 > 0) {
-            isLeap = true;
+            return true;
         } else if (year % 400 > 0) {
-            isLeap = false;
+            return false;
         } else {
-            isLeap = true;
+            return true;
         }
-        return isLeap;
-
     }
 }
 

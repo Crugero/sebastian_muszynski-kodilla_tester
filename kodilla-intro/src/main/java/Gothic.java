@@ -1,8 +1,4 @@
 public class Gothic {
-//    Character diego = new Character();
-//    Character gorn = new Character();
-
-
     public static void main(String[] args) {
         Character diego = new Character("Diego", 100, 10);
         Character gorn = new Character("Gorn", 120, 10);
