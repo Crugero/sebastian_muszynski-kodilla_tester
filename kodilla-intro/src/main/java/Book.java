@@ -2,7 +2,7 @@ public class Book {
     private String author;
     private String title;
 
-    public Book(String author, String title){  //Tak czy siak muszę utworzyć obiekt?
+    public Book(String author, String title){  //Tak czy siak muszę utworzyć konstruktor?
         this.author = author;
         this.title = title;
     }
