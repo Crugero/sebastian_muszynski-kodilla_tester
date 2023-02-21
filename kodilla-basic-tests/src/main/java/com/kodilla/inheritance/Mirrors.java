@@ -15,5 +15,4 @@ public class Mirrors extends OperatingSystem {
     public void turnOff(){
         System.out.println("System is turning off lights so You won't see mirrors");
     }
-
 }
