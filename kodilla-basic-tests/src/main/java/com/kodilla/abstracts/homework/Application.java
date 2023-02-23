@@ -9,13 +9,13 @@ public class Application {
         Shape circleBad = new Circle (1, 2);
         Shape circleGood = new Circle (4,4);
 
-        squareBad.countField();
+        squareBad.countArea();
         rectangle.countPerimeter();
-        squareGood.countField();
+        squareGood.countArea();
         squareGood.countPerimeter();
-        circleBad.countField();
+        circleBad.countArea();
         circleBad.countPerimeter();
-        circleGood.countField();
+        circleGood.countArea();
         circleBad.countPerimeter();
     }
 }

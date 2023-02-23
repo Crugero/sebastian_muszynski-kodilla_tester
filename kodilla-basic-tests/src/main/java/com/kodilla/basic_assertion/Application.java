@@ -6,7 +6,7 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        
+
         int sumResult = calculator.sum(a, b);
         boolean correct = ResultChecker.assertEquals(13, sumResult);
         if (correct) {

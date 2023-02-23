@@ -29,5 +29,5 @@ public abstract class Shape {
 
     public abstract double countPerimeter();
 
-    public abstract double countField();
+    public abstract double countArea();
 }

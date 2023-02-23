@@ -13,7 +13,7 @@ public class Square extends Shape {
     }
 
     @Override
-    public double countField() {
+    public double countArea() {
         double field = 0.0;
         if (checkForEqualParameters()){
             field = getHeight() * getWidth();

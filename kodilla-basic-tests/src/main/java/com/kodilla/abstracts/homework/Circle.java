@@ -20,7 +20,7 @@ public class Circle extends Shape{
     }
 
     @Override
-    public double countField() {
+    public double countArea() {
         double field = 0.0;
         double radius = 0.5 * getHeight();
         if (checkForEqualParameters()) {

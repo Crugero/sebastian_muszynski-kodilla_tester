@@ -13,7 +13,7 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public double countField() {
+    public double countArea() {
         double field = getHeight() * getWidth();
         System.out.println("Field of the rectangle is: " + field);
         return field;
