@@ -1,14 +1,21 @@
 package com.kodilla.basic_assertion;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTestSuite {
 
+    private Calculator calculator;
+
+    @BeforeEach
+    public void setUp(){
+        calculator = new Calculator();
+    }
+
     @Test
     public void testSum() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int sumResult = calculator.sum(a, b);
@@ -17,7 +24,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testSubtract() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int subResult = calculator.subtract(a, b);
@@ -26,7 +32,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testPowerWithIntegers() { //może być w jednym czy powinno być rozbite na osobne przypadki?
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 0;
         int c = -2;
