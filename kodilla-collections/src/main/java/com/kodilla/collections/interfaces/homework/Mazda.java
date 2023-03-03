@@ -8,6 +8,10 @@ public class Mazda implements Car {
         this.speed = 0;
     }
 
+    public Mazda(int speed) {
+        this.speed = speed;
+    }
+
     @Override
     public int getSpeed() {
         return speed;

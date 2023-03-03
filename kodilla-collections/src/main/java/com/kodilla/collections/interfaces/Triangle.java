@@ -6,11 +6,12 @@ public class Triangle implements Shape {
     private double height;
     private double hypotenuse;
 
-    public Triangle(double v, double v1, double v2) {
+    public Triangle(double width, double height, double hypotenuse) {
         this.width = width;
         this.height = height;
         this.hypotenuse = hypotenuse;
     }
+
     @Override
     public double getArea() {
         return width + height + hypotenuse;

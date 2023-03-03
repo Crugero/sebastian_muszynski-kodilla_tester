@@ -8,6 +8,10 @@ public class BMW implements Car {
         this.speed = 0;
     }
 
+    public BMW(int speed) {
+        this.speed = speed;
+    }
+
     @Override
     public int getSpeed() {
         return speed;

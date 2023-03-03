@@ -10,7 +10,7 @@ public class InterfacesDemo {
         Circle circle = new Circle(7.0);
         showShapeDetails(circle);
 
-        Triangle triangle = new Triangle(6.0, 4.0, 7.211);
+        Triangle triangle = new Triangle(6.0, 4.0, 7.2);
         showShapeDetails(triangle);
     }
 
