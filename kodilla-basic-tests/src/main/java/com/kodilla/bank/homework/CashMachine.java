@@ -9,34 +9,34 @@ public class CashMachine {
     private int balance;
 
     public CashMachine () {
-        this.transactions = new int[0];  // TRANSACTIONS TO TABLICA XD
+        this.transactions = new int[0];
         this.numberOfTransactions = 0;
         this.numberOfWithdrawals = 0;
         this.numberOfDeposits = 0;
         this.balance = 0;
     }
 
-    public int[] getTransactions(){
+    public int[] getTransactions() {
         return transactions;
     }
 
-    public int getBalance(){
+    public int getBalance() {
         return balance;
     }
 
-    public int getNumberOfTransactions(){
+    public int getNumberOfTransactions() {
         return numberOfTransactions;
     }
 
-    public int getNumberOfDeposits(){
+    public int getNumberOfDeposits() {
         return numberOfDeposits;
     }
 
-    public int getNumberOfWithdrawals(){
+    public int getNumberOfWithdrawals() {
         return numberOfWithdrawals;
     }
 
-    public int withdraw(int value){
+    public int withdraw(int value) {
         if (value > 0 && value % 10 == 0) {
             numberOfTransactions++;
             int[] newTransactions = new int[this.numberOfTransactions];
@@ -49,7 +49,7 @@ public class CashMachine {
         return balance;
     }
 
-    public int deposit(int value){
+    public int deposit(int value) {
         if (value > 0 && value % 10 == 0) {
             numberOfTransactions++;
             int[] newTransactions = new int[this.numberOfTransactions];
