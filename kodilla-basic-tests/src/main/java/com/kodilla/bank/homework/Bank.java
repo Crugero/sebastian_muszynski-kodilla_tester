@@ -42,40 +42,40 @@ public class Bank {
     }
 
     public double averageWithdrawal(){
-        int sum = 0;
         int count = totalNumberOfWithdrawals();
-        for (int i = 0; i < machines.length; i++){
-            int[] transactions = machines[i].getTransactions();
-            for(int j = 0; j < transactions.length; j++){
-                int number = transactions[j];
-                if (number < 0) {
-                    sum += number;
-                }
-            }
-        }
         if (count == 0){
             return 0;
         }
-        int absSum = Math.abs(sum);
+        int absSum = Math.abs(checkOperation("withdraw"));
         return (double)absSum / count;
     }
 
     public double averageDeposit(){
-        int sum = 0;
         int count = totalNumberOfDeposits();
-        for (int i = 0; i < machines.length; i++){
-            int[] transactions = machines[i].getTransactions();
-            for(int j = 0; j < transactions.length; j++){
-                int number = transactions[j];
-                if (number > 0) {
-                    sum += number;
-                }
-            }
-        }
         if (count == 0){
             return 0;
         }
-        int absSum = Math.abs(sum);
+        int absSum = Math.abs(checkOperation("deposit"));
         return (double)absSum / count;
+    }
+
+    public int checkOperation(String operationType) {
+        int sum = 0;
+        for (int i = 0; i < machines.length; i++) {
+            int[] transactions = machines[i].getTransactions();
+            for(int j = 0; j < transactions.length; j++) {
+                int number = transactions[j];
+                if (operationType == "withdraw") {
+                    if (number < 0) {
+                        sum += number;
+                    }
+                } else {
+                    if (number > 0) {
+                        sum += number;
+                    }
+                }
+            }
+        }
+        return sum;
     }
 }

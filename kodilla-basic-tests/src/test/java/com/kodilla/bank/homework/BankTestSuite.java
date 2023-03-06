@@ -10,7 +10,7 @@ public class BankTestSuite {
     private Bank pko;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
     this.santander = new Bank("Santander", 3);
     this.pko = new Bank("PKO",2);
 
@@ -38,31 +38,31 @@ public class BankTestSuite {
     }
 
     @Test
-    public void checkBalancesAfterOperations(){
+    public void checkBalancesAfterOperations() {
         assertEquals(-600, santander.totalBalance());
         assertEquals(500, pko.totalBalance());
     }
 
     @Test
-    public void checkTotalNumberOfDeposits(){
+    public void checkTotalNumberOfDeposits() {
         assertEquals(3, santander.totalNumberOfDeposits());
         assertEquals(3, pko.totalNumberOfDeposits());
     }
 
     @Test
-    public void checkTotalNumberOfWithdrawals(){
+    public void checkTotalNumberOfWithdrawals() {
         assertEquals(3, santander.totalNumberOfWithdrawals());
         assertEquals(2, pko.totalNumberOfWithdrawals());
     }
 
     @Test
-    public void checkAverageWithdrawal(){
+    public void checkAverageWithdrawal() {
         assertEquals(316.66, santander.averageWithdrawal(), 0.05);
         assertEquals(75, pko.averageWithdrawal(), 0.05);
     }
 
     @Test
-    public void checkAverageDeposit(){
+    public void checkAverageDeposit() {
         assertEquals(116.66, santander.averageDeposit(), 0.05);
         assertEquals(216.66, pko.averageDeposit(), 0.05);
     }
