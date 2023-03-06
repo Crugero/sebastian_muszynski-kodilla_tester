@@ -7,7 +7,6 @@ public class Notebook {
         this.weight = weight;
         this.price = price;
         this.year = year;
-
     }
 
     public void checkPrice() {

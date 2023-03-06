@@ -1,38 +1,45 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java. util.Collections;
+
 public class RandomNumbers {
+    private Random rand = new Random();
+    private int max = 0;
+    private int min = 40;
 
     public static void main(String[] args) {
-        Random rand = new Random();
-
-        List<Integer> numbers = new ArrayList<>();
-        drawNumbers(rand, numbers);
-        Collections.sort(numbers);
-        System.out.println(numbers);
-        giveMin(numbers);
-        giveMax(numbers);
+        RandomNumbers randNo = new RandomNumbers();
+        randNo.drawNumbers();
     }
 
-    public static void drawNumbers(Random rand, List<Integer> numbers) {
+    public void drawNumbers() {
         int sum = 0;
         while (sum < 5000) {
             int number = rand.nextInt(31);
+            setMin(number);
+            setMax(number);
+            System.out.println(number);
             sum += number;
-            numbers.add(number);
+        }
+        System.out.println("Max: " + getMax());
+        System.out.println("Min: " + getMin());
+    }
+
+    public void setMin(int number) {
+        if(number < min) {
+            min = number;
         }
     }
 
-    public static int giveMin (List<Integer> numbers) {
-        int result = numbers.get(0);
-        System.out.println("Wartość MIN to: " + result);
-        return result;
+    public void setMax(int number) {
+        if(number > max) {
+            max = number;
+        }
     }
 
-    public static int giveMax (List<Integer> numbers) {
-        int result = numbers.get(numbers.size() - 1);
-        System.out.println("Wartość MAX to: " + result);
-        return result;
+    public int getMax() {
+        return max;
+    }
+
+    public int getMin() {
+        return min;
     }
 }
