@@ -1,4 +1,4 @@
-public class LeapYear {
+public class testYr {
     public static void main(String[] args) {
         int year = 2001;
         boolean isLeap = true;

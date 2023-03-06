@@ -1,9 +1,8 @@
-import java.util.Arrays;
-
 public class Grades {
     private int[] grades;
     private int size;
     private int sum;
+
     public Grades() {
         grades = new int[10];
         size = 0;

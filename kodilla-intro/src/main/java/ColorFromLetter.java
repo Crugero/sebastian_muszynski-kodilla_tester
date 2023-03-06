@@ -3,7 +3,7 @@ public class ColorFromLetter {
         findColor();
     }
 
-    public static String findColor() {  //Nie rozumiem idei ENUM, próbowałem wykorzystać, ale przy typie String były błędy
+    public static String findColor() {
         String userSelected = LetterPrompt.getLetter();
         String result;
         Boolean didUseDefault = false;

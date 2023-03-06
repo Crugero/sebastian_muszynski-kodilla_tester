@@ -3,7 +3,11 @@ public class LeapYear2 {
         boolean result = przestepczyRok(2000);
         System.out.println(result);
     }
+
     private static boolean przestepczyRok(int year) {
+        if (year < 238) {
+            return false;
+        }
         if (year % 4 > 0) {
             return false;
         } else if (year % 100 > 0) {

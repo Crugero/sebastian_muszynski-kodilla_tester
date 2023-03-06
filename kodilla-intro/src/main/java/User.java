@@ -7,11 +7,11 @@ public class User {
         this.age = age;
     }
 
-    public int getAge() { //Z podpowiedzi Kodilli - Po co getter?
+    public int getAge() {
         return age;
     }
 
-    public String getName() { //Z podpowiedzi Kodilli - Po co getter?
+    public String getName() {
         return name;
     }
 

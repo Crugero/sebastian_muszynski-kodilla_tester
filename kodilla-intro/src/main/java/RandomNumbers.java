@@ -4,7 +4,7 @@ import java.util.Random;
 import java. util.Collections;
 public class RandomNumbers {
 
-    public static void main(String[] args) {  //To ćwiczenie nie było nauką ani programowaniem - to była walka o życie.
+    public static void main(String[] args) {
         Random rand = new Random();
 
         List<Integer> numbers = new ArrayList<>();
